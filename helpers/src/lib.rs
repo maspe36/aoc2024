@@ -14,7 +14,7 @@ where
 
 // Shout out to this guy
 // https://stackoverflow.com/a/74942075/4603553
-fn workspace_dir() -> PathBuf {
+pub fn workspace_dir() -> PathBuf {
     let output = std::process::Command::new(env!("CARGO"))
         .arg("locate-project")
         .arg("--workspace")
