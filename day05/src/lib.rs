@@ -51,9 +51,6 @@ pub fn correct_order(map: &OrderMap, update: &Vec<usize>) -> bool {
 }
 
 pub fn fix_order(map: &OrderMap, update: &Vec<usize>) -> Vec<usize> {
-    // Find where the order is wrong (bounded), and take a slice from the start to that index
-    // Iterate through all possibilities of this (i.e. put the element from the flagrant index into all the indexes, and compute if its good)
-
     let mut temp = update.clone();
     temp.sort_by(|a, b| {
         if let Some(entry) = map.get(a) {
